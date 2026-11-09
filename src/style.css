@@ -1,9 +1,48 @@
-body {
-	background-color: #178c24;
-	display: flex;
+html {
 	height: 100%;
 }
 
-html {
+body {
+	background-color: #fcef0d;
+	display: flex;
+	background-image: url("../assets/bg.png");
 	height: 100%;
+	width: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#leftBar {
+	padding: 1%;
+	height: 70%;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.projectButton {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.addProjectButton {
+	justify-self: end;
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	text-align: center;
+	width: 100%;
+	background-size: 50% auto;
+	background-repeat: no-repeat;
+	background-position: center;
 }

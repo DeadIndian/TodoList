@@ -83,4 +83,6 @@ function storeProject(project) {
 	}
 }
 
-export { ToDo, Projects, storeProject, getAllProjects };
+function createProject() {}
+
+export { ToDo, Projects, storeProject, getAllProjects, createProject };
