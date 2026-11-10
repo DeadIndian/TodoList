@@ -24,13 +24,17 @@ class ToDo {
 	}
 }
 
-class Projects {
+function createProject(name, desc) {
+	const newProject = new Project(name, desc);
+}
+
+class Project {
 	static list = [];
 	constructor(name, desc) {
 		this.name = name;
 		this.desc = desc;
 		this.todos = [];
-		Projects.list.push(this);
+		Project.list.push(this);
 	}
 
 	newToDo(title, desc, dueDate) {
@@ -53,9 +57,10 @@ class Projects {
 
 function getAllProjects() {
 	let a = [];
-	Projects.list.forEach((element) => {
+	Project.list.forEach((element) => {
 		let el = {
 			name: element.name,
+			desc: element.desc,
 			ToDos: element.todos,
 		};
 		a.push(el);
@@ -65,7 +70,7 @@ function getAllProjects() {
 
 function storeProject(project) {
 	if (!localStorage.getItem("Projects")) {
-		localStorage.setItem("Projects", JSON.stringify(Projects.list));
+		localStorage.setItem("Projects", JSON.stringify(Project.list));
 	} else {
 		let p = JSON.parse(localStorage.getItem("Projects"));
 		let a = -1;
@@ -78,11 +83,9 @@ function storeProject(project) {
 			p.push(project);
 		} else {
 			p[p.indexOf(a)] = project;
-			localStorage.setItem("Projects", JSON.stringify(Projects.list));
+			localStorage.setItem("Projects", JSON.stringify(Project.list));
 		}
 	}
 }
 
-function createProject() {}
-
-export { ToDo, Projects, storeProject, getAllProjects, createProject };
+export { ToDo, Project, storeProject, getAllProjects, createProject };

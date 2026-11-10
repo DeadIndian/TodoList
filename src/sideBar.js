@@ -8,8 +8,8 @@ leftBar.id = "leftBar";
 
 const lTitle = document.createElement("img");
 lTitle.src = titleImg;
-lTitle.style.maxWidth = "fit-content";
-lTitle.style.maxHeight = "50%";
+lTitle.style.maxWidth = "100%";
+// lTitle.style.maxHeight = "50%";
 
 const addProject = document.createElement("button");
 addProject.className = "addProjectButton";

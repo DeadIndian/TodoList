@@ -15,7 +15,8 @@ body {
 
 #leftBar {
 	padding: 1%;
-	height: 70%;
+	height: 58%;
+	width: 20%;
 	display: grid;
 	grid-template-columns: 1fr;
 }
@@ -42,7 +43,7 @@ body {
 	cursor: pointer;
 	text-align: center;
 	width: 100%;
-	background-size: 50% auto;
+	background-size: 40% auto;
 	background-repeat: no-repeat;
 	background-position: center;
 }
